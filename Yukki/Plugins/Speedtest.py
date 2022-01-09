@@ -31,19 +31,19 @@ def bytes(size: float) -> str:
 
 @app.on_message(filters.command("speedtest") & ~filters.edited)
 async def statsguwid(_, message):
-    m = await message.reply_text("Running Speed test")
+    m = await message.reply_text("➕Running Speed test➕")
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
-        m = await m.edit("Running Download SpeedTest")
+        m = await m.edit("📥Running Download SpeedTest")
         test.download()
-        m = await m.edit("Running Upload SpeedTest")
+        m = await m.edit("📤Running Upload SpeedTest")
         test.upload()
         test.results.share()
         result = test.results.dict()
     except Exception as e:
         return await m.edit(e)
-    m = await m.edit("Sharing SpeedTest Results")
+    m = await m.edit("📲Sharing SpeedTest Results")
     path = wget.download(result["share"])
 
     output = f"""**Speedtest Results**
