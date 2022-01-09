@@ -31,7 +31,7 @@ def bytes(size: float) -> str:
 
 @app.on_message(filters.command("speedtest") & ~filters.edited)
 async def statsguwid(_, message):
-    m = await message.reply_text("➕Running Speed test➕")
+    m = await message.reply_text("⚡Running Speed test")
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
