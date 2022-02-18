@@ -10,8 +10,8 @@ from rich.console import Console
 from rich.table import Table
 from youtubesearchpython import VideosSearch
 
-from config import (LOG_GROUP_ID, LOG_SESSION, STRING1, STRING2,
-                    STRING3, STRING4, STRING5)
+from config import (LOG_GROUP_ID, LOG_SESSION, STRING1, STRING2, STRING3,
+                    STRING4, STRING5)
 from Yukki import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    ASSID1, ASSID2, ASSID3, ASSID4, ASSID5, ASSNAME1, ASSNAME2,
                    ASSNAME3, ASSNAME4, ASSNAME5, BOT_ID, BOT_NAME, LOG_CLIENT,
@@ -30,6 +30,7 @@ try:
     from config import START_IMG_URL
 except:
     START_IMG_URL = None
+
 
 loop = asyncio.get_event_loop()
 console = Console()
